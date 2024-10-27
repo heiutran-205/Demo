@@ -1,0 +1,66 @@
+/* Phần Tin Tức Khuyến Mãi */
+section#news {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+section#news h2 {
+    font-size: 2em;
+    color: #d84315;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.promo-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+.promo-item img {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.promo-content {
+    text-align: left;
+}
+
+.promo-content h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #d84315;
+}
+
+.promo-content p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Đáp ứng trên thiết bị di động */
+@media (max-width: 768px) {
+    .promo-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .promo-item img {
+        margin-bottom: 15px;
+    }
+
+    .promo-content {
+        text-align: center;
+    }
+}

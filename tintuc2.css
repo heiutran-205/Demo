@@ -1,0 +1,123 @@
+header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    height: 60px; 
+    width: 100vw; 
+    padding: 0 5vw; 
+    border-bottom: 0.5px solid brown; 
+    background-color: #FEEAD3; 
+    position: fixed; 
+    top: 0; 
+    z-index: 99; 
+}
+
+.logo img {
+    width: 58px; 
+    height: auto; 
+}
+
+.menu-toggle {
+    font-size: 24px; 
+    cursor: pointer; 
+    position: fixed; 
+    top: 20px; 
+    right: 20px; 
+    z-index: 1000;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 300px;
+    z-index: 99;
+    background-color: #FEEAD3;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    display: none; 
+}
+.bar ul {
+    display: flex; 
+    align-items: center; 
+    list-style: none; 
+}
+
+.bar ul li a {
+    padding: 0 20px; 
+    font-size: 22px; 
+    font-weight: bold; 
+    text-decoration: none; 
+    display: inline-flex; 
+    align-items: center; 
+}
+
+.bar ul li:hover {
+    color: brown; 
+}
+
+img {
+    width: 100%; 
+    max-width: 800px; 
+    display: block; 
+    margin: 20px auto; 
+    text-align: center; 
+    z-index: -1; 
+}
+
+main {
+    padding-top: 80px; 
+}
+
+.promotion {
+    background-color: #feeAD3;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+}
+.promotion p {
+    font-size: 1.2em;
+}
+.promotion h1 {
+    color: #ff5733;
+}
+.promotion .promo-btn{
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ff6f00; 
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 1;
+    position: relative;
+}
+
+@media (max-width: 850px) {
+    .bar ul li a {
+        padding: 0 15px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 780px) {
+    .hideOnMobile {
+        display: none;
+    }
+
+    .sidebar ul li a {
+        font-size: 20px;
+        padding: 20px;
+    }
+}

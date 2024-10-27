@@ -1,0 +1,101 @@
+/* Thiết lập chung cho toàn bộ header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  /* Căn giữa theo chiều dọc */
+    height: 80px; /* Đảm bảo chiều cao đủ để chứa logo và menu */
+    padding: 0 20px;
+    background-color: #FEEAD3;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Căn chỉnh logo */
+.logo img {
+    width: 80px;  /* Giữ kích thước logo */
+    height: auto;
+}
+
+/* Căn chỉnh thanh menu */
+.bar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;  /* Căn giữa các item trong menu theo chiều dọc */
+    height: 100%;  /* Đảm bảo ul chiếm đủ chiều cao của header */
+}
+
+.bar ul li {
+    margin-left: 20px; /* Khoảng cách giữa các item trong menu */
+}
+
+.bar ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 15px;  /* Căn chỉnh padding để mục menu được cân đối */
+    line-height: 80px;  /* Căn giữa theo chiều dọc bên trong mỗi mục menu */
+}
+
+.bar ul li:hover a {
+    color: #ff5733; /* Đổi màu khi hover */
+}
+
+/* Sidebar dành cho thiết bị di động */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100vh;
+    background-color: #FEEAD3;
+    padding: 20px;
+    transition: right 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar li {
+    margin: 15px 0;
+}
+
+.sidebar li a {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.sidebar li a:hover {
+    color: #ff5733;
+}
+
+/* Thanh menu trên di động */
+.navbar {
+    display: none;
+}
+
+/* Sidebar xuất hiện khi được kích hoạt */
+.sidebar.open {
+    right: 0;
+}
+
+/* Thiết lập dành cho thiết bị di động */
+@media (max-width: 780px) {
+    .hideOnMobile {
+        display: none;
+    }
+
+    .navbar {
+        display: block;
+    }
+
+    /* Căn chỉnh logo trên di động */
+    .logo img {
+        width: 50px;
+    }
+}

@@ -1,0 +1,163 @@
+.logo img{
+    width: 58px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    width: 100vw;
+    padding: 0 5vw;
+    border-bottom: 0.5px brown solid;
+    background-color: #FEEAD3;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 300px;
+    z-index: 99;
+    background-color: #FEEAD3;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.sidebar li{
+    width: 100%;
+    padding: 20px;
+}
+.navbar i{
+    display: flex;
+}
+.bar ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+.bar ul li a{
+    padding: 0 20px;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline;
+    align-items: center;
+}
+.bar ul li:hover{
+    color: brown;
+}
+.menu-toggle {
+    font-size: 24px; /*Phải có dấu 3 chấm hoặc 3 gạch chứ ko cos lấy gì bấm :_))))*/
+    cursor: pointer; 
+    position: fixed; 
+    top: 20px; 
+    right: 20px; 
+    z-index: 1000;}
+@media(max-width:850px){
+    .bar ul li a{
+        padding: 0 15px;
+        font-size: 15px;
+        font-weight: bold;
+        text-decoration: none;
+        display: inline;
+        align-items: center;
+    }
+}
+@media(max-width:780px){
+    .hideOnMobile{
+        display: none;
+    }
+    .sidebar ul li a{
+        font-size: 20px;
+        padding: 20px;
+    }
+    
+}
+/* Định dạng phần nội dung khuyến mãi Noel */
+.promo-noel {
+    background-color: #fff3e0; /* Màu nền nhẹ nhàng, tông cam nhạt */
+    border: 2px solid #d84315; /* Đường viền cam đậm */
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+    position: relative;
+    overflow: hidden;
+}
+
+.promo-noel::before {
+    content: '';
+    background: url('noel-bg.png') no-repeat center;
+    opacity: 0.1; /* Hình nền làm mờ */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.promo-noel h2 {
+    font-size: 2.5em;
+    color: #b71c1c; /* Màu đỏ đậm tạo sự nổi bật */
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    z-index: 1;
+    position: relative;
+}
+
+.promo-noel p {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.6;
+    z-index: 1;
+    position: relative;
+}
+
+.promo-noel p strong {
+    color: #d84315; /* Nhấn mạnh các phần ưu đãi */
+    font-size: 1.4em;
+}
+
+.promo-noel .promo-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ff6f00; /* Màu nút nổi bật */
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 1;
+    position: relative;
+}
+
+.promo-noel .promo-btn:hover {
+    background-color: #e65100; /* Thay đổi màu khi di chuột */
+}
+/* Căn chỉnh hình ảnh */
+img {
+    width: 100%; /* Đảm bảo hình ảnh chiếm toàn bộ chiều rộng */
+    max-width: 800px; /* Chiều rộng tối đa của hình ảnh */
+    display: block; /* Hiển thị như khối */
+    margin: 20px auto; /* Căn giữa với khoảng cách trên/dưới */
+    text-align: center; /* Căn giữa nội dung bên trong hình ảnh */
+    z-index: -1; /* Đảm bảo hình ảnh nằm dưới thanh menu */
+}
+
+/* Đảm bảo header không che khuất nội dung */
+main {
+    padding-top: 80px; /* Khoảng trống cho header cố định */
+}
+
